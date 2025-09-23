@@ -7,3 +7,4 @@ models/
 data/
 *.log
 .DS_Store
+*.code-workspace

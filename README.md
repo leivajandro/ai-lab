@@ -6,7 +6,10 @@ Machine Learning experiments using Hugging Face Transformers.
 
 ```
 ai-lab/
-├── notebooks/          # Jupyter notebooks for experiments
+├── notebooks/
+│   └── transformers/
+│       └── tasks/
+│           └── text_generation.ipynb
 ├── requirements.txt    # Python dependencies
 ├── .gitignore         # Git ignore rules
 └── LICENSE            # MIT License
@@ -24,7 +27,7 @@ pip3 install -r requirements.txt
 
 ```bash
 source .venv/bin/activate
-jupyter notebook notebooks/playground.ipynb
+jupyter notebook notebooks/transformers/tasks/text_generation.ipynb
 ```
 
-Start experimenting with transformers in the playground notebook!
+Start experimenting with transformers in the text generation notebook!
