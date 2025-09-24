@@ -1,7 +1,10 @@
 accelerate
 ipykernel
 jupyter
+openai
 Pillow
+strands-agents
+strands-agents-tools
 torch
 torchvision
 transformers
