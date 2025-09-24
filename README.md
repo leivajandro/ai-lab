@@ -46,6 +46,7 @@ jupyter notebook
 ### AI Agents
 - **Strands Agents**: Tool-using agents with local LLM integration
 - Connects to local OpenAI-compatible servers (LM Studio, etc.)
+- Optimized parameters for precise tool usage (low temperature, top_p)
 - Includes calculator and other tools
 
 ## Features
