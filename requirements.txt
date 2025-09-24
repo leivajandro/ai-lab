@@ -1,4 +1,7 @@
-transformers
-torch
-jupyter
+accelerate
 ipykernel
+jupyter
+Pillow
+torch
+torchvision
+transformers
