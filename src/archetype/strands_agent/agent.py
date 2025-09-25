@@ -1,6 +1,17 @@
+import json
+import logging
 from strands import Agent, tool
 from strands.models.openai import OpenAIModel
 from strands_tools import calculator, current_time
+
+logging.basicConfig(
+    format="%(levelname)s | %(name)s | %(message)s",
+    handlers=[logging.StreamHandler()]
+)
+logging.getLogger("strands").setLevel(logging.INFO)
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 @tool
 def custom_tool(input_param: str) -> str:
@@ -13,7 +24,7 @@ def custom_tool(input_param: str) -> str:
     Returns:
         str: Return description
     """
-    print(f"Custom tool called with input: {input_param}")
+    logger.info(f"Custom tool called with input: {input_param}")
     # TODO: Implement custom logic here
     return f"Processed: {input_param}"
 
@@ -32,11 +43,13 @@ model = OpenAIModel(
 )
 
 tools = [calculator, current_time, custom_tool]
-agent = Agent(tools=tools)
+agent = Agent(model=model, tools=tools)
 
 message = """
-Your agent prompt here.
+Calculate 5 * 5.
 """
 
 if __name__ == "__main__":
-    agent(message)
+    result = agent(message)
+    metrics = result.metrics.get_summary()
+    logger.debug(json.dumps(metrics, indent=2))
