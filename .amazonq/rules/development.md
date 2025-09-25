@@ -5,6 +5,12 @@
 - Write minimal, clean code without verbose implementations
 - Focus only on code that directly contributes to the solution
 
+## Language Requirements
+- All documentation must be in English
+- All code (variables, functions, classes) must be in English
+- All comments (if any) must be in English
+- All README files must be in English
+
 ## Response Format
 - Always provide multiple implementation options (2-3 alternatives minimum)
 - Clearly state your preferred option and explain why
