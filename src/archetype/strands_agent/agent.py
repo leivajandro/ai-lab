@@ -2,7 +2,7 @@ import json
 import logging
 from strands import Agent, tool
 from strands.models.openai import OpenAIModel
-from strands_tools import calculator, current_time
+from strands_agents_tools import calculator, current_time
 
 logging.basicConfig(
     format="%(levelname)s | %(name)s | %(message)s",
