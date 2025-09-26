@@ -2,6 +2,9 @@ accelerate
 asyncio
 ipykernel
 jupyter
+mlx
+mlx-lm
+mlx-vlm
 openai
 Pillow
 strands-agents
