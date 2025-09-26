@@ -12,8 +12,10 @@ ai-lab/
 │   │       ├── text_generation.ipynb      # Qwen3-0.6B text generation
 │   │       └── image_text_to_text.ipynb   # InternVL3_5-1B vision-language
 │   ├── mlx/
-│   │   └── tasks/
-│   │       └── text_generation.ipynb      # Llama-3.2-3B MLX text generation
+│   │   ├── tasks/
+│   │   │   └── text_generation.ipynb      # LFM2-1.2B MLX text generation
+│   │   └── quantization/
+│   │       └── model_quantization.ipynb   # Convert HF models to MLX format
 │   └── strands_agents/
 │       └── agent.ipynb                    # Strands agent with local LLM
 ├── requirements.txt    # Python dependencies
@@ -47,7 +49,7 @@ jupyter notebook
 - Supports image analysis and visual question answering
 
 ### MLX Models (Apple Silicon Optimized)
-- **Llama-3.2-3B-Instruct-4bit**: Quantized language model for text generation
+- **LFM2-1.2B-4bit**: Quantized language model for text generation
 - Native Apple Silicon acceleration with MLX framework
 
 ### AI Agents
@@ -63,6 +65,7 @@ jupyter notebook
 - **Memory Efficient**: BFloat16 precision and 4-bit quantization for optimal performance
 - **Chat Templates**: Proper conversation formatting with role-based messages
 - **Text Generation**: Advanced language model capabilities with chat templates
+- **Model Quantization**: Convert Hugging Face models to optimized MLX format
 - **Agent Framework**: Tool-using AI agents with local LLM backends
 
 Start experimenting with AI models and agents in the notebooks!

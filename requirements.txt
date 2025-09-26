@@ -1,6 +1,7 @@
 accelerate
 asyncio
 ipykernel
+huggingface_hub[cli]
 jupyter
 mlx
 mlx-lm
