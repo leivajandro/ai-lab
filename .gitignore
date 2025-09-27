@@ -5,6 +5,7 @@ __pycache__/
 .ipynb_checkpoints/
 models/
 data/
+sessions/
 *.log
 .DS_Store
 *.code-workspace
