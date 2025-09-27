@@ -14,8 +14,8 @@ ai-lab/
 │   ├── mlx/
 │   │   ├── tasks/
 │   │   │   └── text_generation.ipynb      # LFM2-1.2B MLX text generation
-│   │   └── quantization/
-│   │       └── model_quantization.ipynb   # Convert HF models to MLX format
+│   │   └── conversion/
+│   │       └── model_conversion.ipynb     # Convert HF models to MLX format
 │   └── strands_agents/
 │       └── agent.ipynb                    # Strands agent with local LLM
 ├── requirements.txt    # Python dependencies
@@ -65,7 +65,7 @@ jupyter notebook
 - **Memory Efficient**: BFloat16 precision and 4-bit quantization for optimal performance
 - **Chat Templates**: Proper conversation formatting with role-based messages
 - **Text Generation**: Advanced language model capabilities with chat templates
-- **Model Quantization**: Convert Hugging Face models to optimized MLX format
+- **Model Conversion**: Convert Hugging Face models to optimized MLX format
 - **Agent Framework**: Tool-using AI agents with local LLM backends
 
 Start experimenting with AI models and agents in the notebooks!
