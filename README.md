@@ -17,7 +17,11 @@ ai-lab/
 │   │   └── conversion/
 │   │       └── model_conversion.ipynb     # Convert HF models to MLX format
 │   └── strands_agents/
-│       └── agent.ipynb                    # Strands agent with local LLM
+│       ├── basic.ipynb                    # Simple agent with local LLM
+│       ├── hooks.ipynb                    # Agent with lifecycle hooks
+│       ├── session.ipynb                  # Agent with persistent sessions
+│       ├── multimodal.ipynb               # Agent with vision capabilities
+│       └── streaming.ipynb                # Agent with async streaming
 ├── requirements.txt    # Python dependencies
 ├── .gitignore         # Git ignore rules
 └── LICENSE            # MIT License
