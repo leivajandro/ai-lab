@@ -18,6 +18,7 @@ ai-lab/
 │   ├── mlx/
 │   │   └── tasks/
 │   │       ├── conversion.ipynb           # Convert HF models to MLX format
+│   │       ├── upload.ipynb               # Upload models to Hugging Face Hub
 │   │       └── text_generation.ipynb      # MLX text generation
 │   └── strands_agents/
 │       ├── basic.ipynb                    # Simple agent with local LLM
@@ -83,6 +84,7 @@ jupyter notebook
 - **Chat Templates**: Proper conversation formatting with role-based messages
 - **Text Generation**: Advanced language model capabilities with chat templates
 - **Model Conversion**: Convert Hugging Face models to optimized MLX format
+- **Model Upload**: Upload models to Hugging Face Hub for sharing
 - **Agent Framework**: Tool-using AI agents with local LLM backends
 
 Start experimenting with AI models and agents in the notebooks!
