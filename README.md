@@ -6,22 +6,33 @@ Machine Learning experiments using Hugging Face Transformers with text, vision m
 
 ```
 ai-lab/
+├── assets/
+│   ├── documents/                         # PDF documents for testing
+│   └── images/                            # Test images for vision models
+├── models/                                # Local model storage
 ├── notebooks/
 │   ├── transformers/
 │   │   └── tasks/
-│   │       ├── text_generation.ipynb      # Qwen3-0.6B text generation
-│   │       └── image_text_to_text.ipynb   # InternVL3_5-1B vision-language
+│   │       ├── text_generation.ipynb      # Text generation with transformers
+│   │       └── image_text_to_text.ipynb   # Vision-language models
 │   ├── mlx/
-│   │   ├── tasks/
-│   │   │   └── text_generation.ipynb      # LFM2-1.2B MLX text generation
-│   │   └── conversion/
-│   │       └── model_conversion.ipynb     # Convert HF models to MLX format
+│   │   └── tasks/
+│   │       ├── conversion.ipynb           # Convert HF models to MLX format
+│   │       └── text_generation.ipynb      # MLX text generation
 │   └── strands_agents/
 │       ├── basic.ipynb                    # Simple agent with local LLM
 │       ├── hooks.ipynb                    # Agent with lifecycle hooks
 │       ├── session.ipynb                  # Agent with persistent sessions
 │       ├── multimodal.ipynb               # Agent with vision capabilities
-│       └── streaming.ipynb                # Agent with async streaming
+│       ├── streaming.ipynb                # Agent with async streaming
+│       ├── auto_tools.ipynb               # Automatic tool discovery
+│       ├── conversation_manager.ipynb     # Conversation management
+│       ├── mcp_client.ipynb               # Model Context Protocol client
+│       ├── structured_output.ipynb        # Structured response generation
+│       └── tool_executor.ipynb            # Custom tool execution
+├── src/
+│   └── archetype/
+│       └── strands_agent/                 # Agent framework source code
 ├── requirements.txt    # Python dependencies
 ├── .gitignore         # Git ignore rules
 └── LICENSE            # MIT License
@@ -45,22 +56,24 @@ jupyter notebook
 ## Models
 
 ### Text Generation
-- **Qwen3-0.6B**: Lightweight language model for chat and text generation
+- Lightweight language models for chat and text generation
 - Optimized for Apple Silicon with MPS acceleration
 
-### Image Text to Text
-- **InternVL3_5-1B**: Vision-language model for image understanding
-- Supports image analysis and visual question answering
+### Vision-Language Models
+- Multimodal models for image understanding and analysis
+- Support visual question answering and image description
 
 ### MLX Models (Apple Silicon Optimized)
-- **LFM2-1.2B-4bit**: Quantized language model for text generation
+- Quantized language models for efficient text generation
 - Native Apple Silicon acceleration with MLX framework
+- Local model storage in `models/` directory
 
 ### AI Agents
-- **Strands Agents**: Tool-using agents with local LLM integration
+- Tool-using agents with local LLM integration
 - Connects to local OpenAI-compatible servers (LM Studio, etc.)
-- Optimized parameters for precise tool usage (low temperature, top_p)
-- Includes calculator and other tools
+- Advanced features: sessions, hooks, streaming, structured output
+- Model Context Protocol (MCP) support
+- Custom tool development and execution
 
 ## Features
 
