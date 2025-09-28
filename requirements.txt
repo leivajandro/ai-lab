@@ -3,6 +3,7 @@ asyncio
 ipykernel
 huggingface_hub[cli]
 jupyter
+mcp
 mlx
 mlx-lm
 mlx-vlm
