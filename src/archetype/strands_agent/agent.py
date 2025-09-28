@@ -2,7 +2,7 @@ import json
 import logging
 from strands import Agent, tool
 from strands.models.openai import OpenAIModel
-from strands_agents_tools import calculator, current_time
+from strands_tools import calculator, current_time
 
 logging.basicConfig(
     format="%(levelname)s | %(name)s | %(message)s",
@@ -46,7 +46,7 @@ tools = [calculator, current_time, custom_tool]
 agent = Agent(model=model, tools=tools)
 
 message = """
-Calculate 5 * 5.
+Calculate 2 + 2.
 """
 
 if __name__ == "__main__":
