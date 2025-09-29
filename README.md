@@ -6,6 +6,10 @@ Machine Learning experiments using Hugging Face Transformers with text, vision m
 
 ```
 ai-lab/
+├── .amazonq/
+│   └── rules/                             # Amazon Q configuration rules
+│       ├── commit_rules.md                # Git commit message standards
+│       └── interaction_rules.md           # AI interaction guidelines
 ├── assets/
 │   ├── documents/                         # PDF documents for testing
 │   └── images/                            # Test images for vision models
@@ -21,6 +25,8 @@ ai-lab/
 │   │       ├── upload.ipynb               # Upload models to Hugging Face Hub
 │   │       └── text_generation.ipynb      # MLX text generation
 │   └── strands_agents/
+│       ├── sessions/                      # Persistent agent sessions
+│       ├── tools/                         # Custom agent tools
 │       ├── basic.ipynb                    # Simple agent with local LLM
 │       ├── hooks.ipynb                    # Agent with lifecycle hooks
 │       ├── session.ipynb                  # Agent with persistent sessions
