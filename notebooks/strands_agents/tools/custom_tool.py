@@ -1,7 +1,7 @@
-from strands import tool
+from strands import tool, ToolContext
 
-@tool
-def custom_tool(message: str) -> str:
+@tool(context=True)
+def custom_tool(tool_context: ToolContext, message: str) -> str:
     """
     A custom tool that processes messages.
     
@@ -11,4 +11,4 @@ def custom_tool(message: str) -> str:
     Returns:
         str: Processed message
     """
-    return f"Processed: {message}"
+    return f"The agent name is {tool_context.agent.name} processed: {message}"
