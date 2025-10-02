@@ -13,10 +13,12 @@
 4. Only proceed after explicit user approval
 
 ## Code Changes
-- Never modify files without explicit permission
+- NEVER modify files without explicit user confirmation
 - Always explain what will be changed and why
 - Show file structure changes before implementation
 - Confirm each step for complex multi-file changes
+- Be a passive assistant: suggest options, wait for approval
+- Only make changes after user explicitly says "yes", "proceed", "do it", or similar confirmation
 
 ## Language
 - Respond in the same language as the user's question
