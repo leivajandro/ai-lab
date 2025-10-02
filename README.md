@@ -37,14 +37,21 @@ ai-lab/
 │       ├── mcp_client.ipynb               # Model Context Protocol client
 │       ├── structured_output.ipynb        # Structured response generation
 │       └── tool_executor.ipynb            # Custom tool execution
-├── scripts/
-│   └── mcp_server.py                      # MCP server script
 ├── src/
-│   └── archetype/
-│       └── strands_agent/                 # Agent framework source code
-├── requirements.txt    # Python dependencies
-├── .gitignore         # Git ignore rules
-└── LICENSE            # MIT License
+│   ├── archetype/
+│   │   └── strands_agent/                 # Agent framework source code
+│   └── mcp_lab/
+│       └── lab_server/
+│           ├── main.py                    # MCP server implementation
+│           └── tools/
+│               ├── calculator.py          # Mathematical calculator tool
+│               ├── text_analyzer.py       # Text analysis tool
+│               ├── timestamp.py           # Timestamp tool
+│               └── README.md              # Tools documentation
+├── setup.py           # Package configuration with entry points
+├── requirements.txt   # Python dependencies
+├── .gitignore        # Git ignore rules
+└── LICENSE           # MIT License
 ```
 
 ## Setup
@@ -53,6 +60,9 @@ ai-lab/
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+
+# Install project in development mode (enables mcp-server command)
+pip install -e .
 ```
 
 ## Usage
@@ -66,7 +76,14 @@ jupyter notebook
 ### MCP Server
 ```bash
 source .venv/bin/activate
-python scripts/mcp_server.py
+
+# Using entry point command (recommended)
+mcp-server
+mcp-server --transport stdio
+mcp-server --transport websocket
+
+# Or using module directly
+python -m mcp_lab.lab_server.main
 ```
 
 ## Models
@@ -90,6 +107,16 @@ python scripts/mcp_server.py
 - Advanced features: sessions, hooks, streaming, structured output
 - Model Context Protocol (MCP) support
 - Custom tool development and execution
+
+## MCP Tools
+
+The project includes a collection of MCP tools in `src/mcp_lab/lab_server/tools/`:
+
+- **Calculator**: Mathematical expression evaluator
+- **Text Analyzer**: Word, character, and sentence counter
+- **Timestamp**: Current date and time provider
+
+See `src/mcp_lab/lab_server/tools/README.md` for detailed documentation.
 
 ## Features
 

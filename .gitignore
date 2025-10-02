@@ -9,3 +9,8 @@ sessions/
 *.log
 .DS_Store
 *.code-workspace
+
+# Package build artifacts
+*.egg-info/
+build/
+dist/
