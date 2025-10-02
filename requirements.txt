@@ -3,10 +3,12 @@ asyncio
 ipykernel
 huggingface_hub[cli]
 jupyter
-mcp
+mcp[server]
+mcp[streamable-http]
 mlx
 mlx-lm
 mlx-vlm
+nest-asyncio
 openai
 Pillow
 strands-agents

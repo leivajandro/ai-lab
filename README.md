@@ -37,6 +37,8 @@ ai-lab/
 │       ├── mcp_client.ipynb               # Model Context Protocol client
 │       ├── structured_output.ipynb        # Structured response generation
 │       └── tool_executor.ipynb            # Custom tool execution
+├── scripts/
+│   └── mcp_server.py                      # MCP server script
 ├── src/
 │   └── archetype/
 │       └── strands_agent/                 # Agent framework source code
@@ -55,9 +57,16 @@ pip install -r requirements.txt
 
 ## Usage
 
+### Notebooks
 ```bash
 source .venv/bin/activate
 jupyter notebook
+```
+
+### MCP Server
+```bash
+source .venv/bin/activate
+python scripts/mcp_server.py
 ```
 
 ## Models
@@ -92,5 +101,6 @@ jupyter notebook
 - **Model Conversion**: Convert Hugging Face models to optimized MLX format
 - **Model Upload**: Upload models to Hugging Face Hub for sharing
 - **Agent Framework**: Tool-using AI agents with local LLM backends
+- **MCP Server**: Model Context Protocol server for agent integration
 
 Start experimenting with AI models and agents in the notebooks!
