@@ -26,23 +26,30 @@ ai-lab/
 │   │       ├── upload.ipynb               # Upload models to Hugging Face Hub
 │   │       └── text_generation.ipynb      # MLX text generation
 │   └── strands_agents/
-│       ├── sessions/                      # Persistent agent sessions
+│       ├── basics/                        # Fundamental agent examples
+│       │   ├── basic.ipynb                # Simple agent with local LLM
+│       │   ├── hooks.ipynb                # Agent with lifecycle hooks
+│       │   ├── session.ipynb              # Agent with persistent sessions
+│       │   ├── multimodal.ipynb           # Agent with vision capabilities
+│       │   └── streaming.ipynb            # Agent with async streaming
+│       ├── features/                      # Advanced agent features
+│       │   ├── conversation_manager.ipynb # Conversation management
+│       │   └── structured_output.ipynb    # Structured response generation
 │       ├── tools/                         # Custom agent tools
-│       ├── basic.ipynb                    # Simple agent with local LLM
-│       ├── hooks.ipynb                    # Agent with lifecycle hooks
-│       ├── session.ipynb                  # Agent with persistent sessions
-│       ├── multimodal.ipynb               # Agent with vision capabilities
-│       ├── streaming.ipynb                # Agent with async streaming
-│       ├── auto_tools.ipynb               # Automatic tool discovery
-│       ├── conversation_manager.ipynb     # Conversation management
-│       ├── mcp_client.ipynb               # Model Context Protocol client
-│       ├── structured_output.ipynb        # Structured response generation
-│       ├── tool_executor.ipynb            # Custom tool execution
-│       ├── agents_as_tools.ipynb          # Agents as tools orchestration pattern
-│       ├── swarm.ipynb                    # Multi-agent swarm collaboration
-│       ├── swarm_as_tool.ipynb            # Dynamic swarm creation using swarm tool
-│       ├── a2a_server.ipynb               # A2A server agent example
-│       └── a2a_client.ipynb               # A2A client communication example
+│       │   ├── auto_tools.ipynb           # Automatic tool discovery
+│       │   ├── tool_executor.ipynb        # Custom tool execution
+│       │   └── [other tool files]         # Tool implementations
+│       ├── multi_agent/                   # Multi-agent collaboration patterns
+│       │   ├── agents_as_tools.ipynb      # Agents as tools orchestration
+│       │   ├── swarm.ipynb                # Multi-agent swarm collaboration
+│       │   ├── swarm_as_tool.ipynb        # Dynamic swarm creation
+│       │   └── graph.ipynb                # Graph-based workflow
+│       ├── mcp/                           # Model Context Protocol
+│       │   └── mcp_client.ipynb           # MCP client implementation
+│       └── a2a/                           # Agent-to-Agent communication
+│           ├── a2a_server.ipynb           # A2A server agent
+│           ├── a2a_client.ipynb           # A2A client communication
+│           └── [other a2a files]          # A2A implementations
 ├── src/
 │   ├── archetype/
 │   │   └── strands_agent/                 # Agent framework source code
