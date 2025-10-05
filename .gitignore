@@ -33,7 +33,8 @@ venv.bak/
 .ipynb_checkpoints
 
 # Models and data
-models/
+models/*
+!models/.gitkeep
 *.bin
 *.safetensors
 *.gguf
@@ -68,3 +69,7 @@ logs/
 
 # Hugging Face cache
 .huggingface/
+
+# Artifacts (generated results)
+artifacts/*/*
+!artifacts/*/.gitkeep
