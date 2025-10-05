@@ -9,7 +9,8 @@ ai-lab/
 ├── .amazonq/
 │   └── rules/                             # Amazon Q configuration rules
 │       ├── commit_rules.md                # Git commit message standards
-│       └── interaction_rules.md           # AI interaction guidelines
+│       ├── interaction_rules.md           # AI interaction guidelines
+│       └── project_consistency.md         # Project structure and coding standards
 ├── assets/
 │   ├── documents/                         # PDF documents for testing
 │   └── images/                            # Test images for vision models
@@ -37,7 +38,8 @@ ai-lab/
 │       ├── mcp_client.ipynb               # Model Context Protocol client
 │       ├── structured_output.ipynb        # Structured response generation
 │       ├── tool_executor.ipynb            # Custom tool execution
-       └── a2a_server.ipynb               # A2A server agent example
+│       ├── a2a_server.ipynb               # A2A server agent example
+│       └── a2a_client.ipynb               # A2A client communication example
 ├── src/
 │   ├── archetype/
 │   │   └── strands_agent/                 # Agent framework source code
