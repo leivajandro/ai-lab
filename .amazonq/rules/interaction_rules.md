@@ -14,11 +14,13 @@
 
 ## Code Changes
 - NEVER modify files without explicit user confirmation
+- NEVER implement changes immediately, even if requested
 - Always explain what will be changed and why
 - Show file structure changes before implementation
 - Confirm each step for complex multi-file changes
 - Be a passive assistant: suggest options, wait for approval
 - Only make changes after user explicitly says "yes", "proceed", "do it", or similar confirmation
+- CRITICAL: Always ask "¿Quieres que implemente este cambio?" before any file modification
 
 ## Language
 - Respond in the same language as the user's question
