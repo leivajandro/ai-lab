@@ -36,10 +36,16 @@ ai-lab/
 │       ├── conversation_manager.ipynb     # Conversation management
 │       ├── mcp_client.ipynb               # Model Context Protocol client
 │       ├── structured_output.ipynb        # Structured response generation
-│       └── tool_executor.ipynb            # Custom tool execution
+│       ├── tool_executor.ipynb            # Custom tool execution
+       └── a2a_server.ipynb               # A2A server agent example
 ├── src/
 │   ├── archetype/
 │   │   └── strands_agent/                 # Agent framework source code
+│   ├── a2a_lab/
+│   │   ├── server.py                      # A2A server implementation
+│   │   └── tools/
+│   │       ├── calculator.py              # Mathematical calculator tool
+│   │       └── README.md                  # Tools documentation
 │   └── mcp_lab/
 │       └── lab_server/
 │           ├── main.py                    # MCP server implementation
@@ -48,42 +54,43 @@ ai-lab/
 │               ├── text_analyzer.py       # Text analysis tool
 │               ├── timestamp.py           # Timestamp tool
 │               └── README.md              # Tools documentation
-├── setup.py           # Package configuration with entry points
-├── requirements.txt   # Python dependencies
+├── pyproject.toml     # Project configuration and dependencies
 ├── .gitignore        # Git ignore rules
 └── LICENSE           # MIT License
 ```
 
 ## Setup
 
+### Install uv
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+brew install uv
+```
 
-# Install project in development mode (enables mcp-server command)
-pip install -e .
+### Install dependencies
+```bash
+uv sync
+source .venv/bin/activate
 ```
 
 ## Usage
 
 ### Notebooks
 ```bash
-source .venv/bin/activate
-jupyter notebook
+uv run jupyter notebook
 ```
 
 ### MCP Server
 ```bash
-source .venv/bin/activate
+uv run mcp-server
+uv run mcp-server --transport stdio
+uv run mcp-server --transport websocket
+uv run python -m mcp_lab.lab_server.main
+```
 
-# Using entry point command (recommended)
-mcp-server
-mcp-server --transport stdio
-mcp-server --transport websocket
-
-# Or using module directly
-python -m mcp_lab.lab_server.main
+### A2A Server
+```bash
+uv run a2a-server
+uv run python -m a2a_lab.server
 ```
 
 ## Models
@@ -108,15 +115,19 @@ python -m mcp_lab.lab_server.main
 - Model Context Protocol (MCP) support
 - Custom tool development and execution
 
-## MCP Tools
+## Tools
 
-The project includes a collection of MCP tools in `src/mcp_lab/lab_server/tools/`:
-
+### MCP Tools
+The project includes MCP tools in `src/mcp_lab/lab_server/tools/`:
 - **Calculator**: Mathematical expression evaluator
 - **Text Analyzer**: Word, character, and sentence counter
 - **Timestamp**: Current date and time provider
 
-See `src/mcp_lab/lab_server/tools/README.md` for detailed documentation.
+### A2A Tools
+The project includes A2A tools in `src/a2a_lab/tools/`:
+- **Calculator**: Mathematical expression evaluator
+
+See respective `README.md` files for detailed documentation.
 
 ## Features
 
@@ -129,5 +140,6 @@ See `src/mcp_lab/lab_server/tools/README.md` for detailed documentation.
 - **Model Upload**: Upload models to Hugging Face Hub for sharing
 - **Agent Framework**: Tool-using AI agents with local LLM backends
 - **MCP Server**: Model Context Protocol server for agent integration
+- **A2A Server**: Agent-to-Agent HTTP server for multi-agent communication
 
 Start experimenting with AI models and agents in the notebooks!
