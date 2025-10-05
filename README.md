@@ -40,6 +40,7 @@ ai-lab/
 │       ├── tool_executor.ipynb            # Custom tool execution
 │       ├── agents_as_tools.ipynb          # Agents as tools orchestration pattern
 │       ├── swarm.ipynb                    # Multi-agent swarm collaboration
+│       ├── swarm_as_tool.ipynb            # Dynamic swarm creation using swarm tool
 │       ├── a2a_server.ipynb               # A2A server agent example
 │       └── a2a_client.ipynb               # A2A client communication example
 ├── src/
