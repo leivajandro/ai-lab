@@ -38,6 +38,8 @@ ai-lab/
 │       ├── mcp_client.ipynb               # Model Context Protocol client
 │       ├── structured_output.ipynb        # Structured response generation
 │       ├── tool_executor.ipynb            # Custom tool execution
+│       ├── agents_as_tools.ipynb          # Agents as tools orchestration pattern
+│       ├── swarm.ipynb                    # Multi-agent swarm collaboration
 │       ├── a2a_server.ipynb               # A2A server agent example
 │       └── a2a_client.ipynb               # A2A client communication example
 ├── src/
