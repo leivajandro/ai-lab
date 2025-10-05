@@ -25,7 +25,9 @@
 - Maintain consistency throughout the conversation
 
 ## Coding Rules
-- Never include comments in generated code
-- Write self-documenting, clean code
+- NEVER include any comments in code (no # comments, no inline comments)
+- NO explanatory comments like "# Math query" or "# Create agent"
+- Write self-documenting, clean code only
 - Use descriptive variable and function names
 - Keep code minimal and focused
+- Code should be readable without any comments
