@@ -74,14 +74,51 @@ ai-lab/
 ## Setup
 
 ### Install uv
+
+**macOS/Linux:**
 ```bash
 brew install uv
 ```
 
+**Alternative (curl):**
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+**Windows:**
+```powershell
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
 ### Install dependencies
+
+**Create virtual environment and install all dependencies:**
 ```bash
 uv sync
-source .venv/bin/activate
+```
+
+**Activate virtual environment:**
+```bash
+source .venv/bin/activate  # macOS/Linux
+# or
+.venv\Scripts\activate     # Windows
+```
+
+**Add new dependencies:**
+```bash
+uv add package-name
+uv add --dev package-name  # Development dependencies
+```
+
+**Install from requirements.txt:**
+```bash
+uv pip install -r requirements.txt
+```
+
+**Run commands with uv (without activating venv):**
+```bash
+uv run python script.py
+uv run jupyter notebook
 ```
 
 ## Usage

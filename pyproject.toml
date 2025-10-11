@@ -25,6 +25,7 @@ dependencies = [
     "torch",
     "torchvision",
     "transformers",
+    "ollama>=0.6.0",
 ]
 
 [project.scripts]
