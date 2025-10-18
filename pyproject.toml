@@ -26,6 +26,7 @@ dependencies = [
     "torchvision",
     "transformers",
     "ollama>=0.6.0",
+    "bedrock-agentcore>=1.0.3",
 ]
 
 [project.scripts]
