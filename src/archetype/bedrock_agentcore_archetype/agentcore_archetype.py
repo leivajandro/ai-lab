@@ -15,7 +15,7 @@ from strands import Agent
 
 logging.basicConfig(level=logging.INFO)
 
-agent = Agent()
+agent = Agent(model="amazon.nova-micro-v1:0")
 app = BedrockAgentCoreApp()
 
 @app.entrypoint
