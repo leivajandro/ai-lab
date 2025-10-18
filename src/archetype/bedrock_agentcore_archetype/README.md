@@ -17,19 +17,26 @@ uv init . --no-workspace
 ### Add dependencies
 ```bash
 uv add strands-agents bedrock-agentcore
+uv add --dev bedrock-agentcore-starter-toolkit
 ```
 
 ## Files
 
-- `main.py` - Production agent for AWS deployment
-- `requirements.txt` - Legacy requirements file
+- `agentcore_archetype.py` - Production agent for AWS deployment
+- `requirements.txt` - Dependencies required by Amazon Bedrock AgentCore
 - `pyproject.toml` - Modern dependency management
 
 ## AWS Deployment
 
+### Set AWS credentials
+```bash
+export AWS_PROFILE=personal
+export AWS_DEFAULT_REGION=us-east-1
+```
+
 ### Configure agent
 ```bash
-agentcore configure --entrypoint main.py --region us-east-1
+agentcore configure --entrypoint agentcore_archetype.py --region us-east-1
 ```
 
 ### Test deployment locally
@@ -54,7 +61,7 @@ agentcore invoke '{"prompt": "Hello"}'
 
 ## Agent Configuration
 
-### Production Agent (`main.py`)
+### Production Agent (`agentcore_archetype.py`)
 - Uses default Strands configuration
 - Ready for AWS deployment
 - No local dependencies

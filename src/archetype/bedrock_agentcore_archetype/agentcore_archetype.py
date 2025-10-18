@@ -3,9 +3,6 @@
 Deploys a Strands agent as an HTTP service using the Bedrock AgentCore Runtime SDK.
 The server accepts JSON payloads with a 'prompt' key and returns agent responses.
 
-Usage:
-    python -m bedrock.agentcore.strands_agent
-
 Endpoint:
     POST /invocations
     Content-Type: application/json
