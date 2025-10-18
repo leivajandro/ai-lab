@@ -142,6 +142,11 @@ uv run a2a-server
 uv run python -m a2a_lab.server
 ```
 
+### Bedrock AgentCore (Local Development)
+```bash
+uv run python strands_agent.py
+```
+
 
 
 ## Models

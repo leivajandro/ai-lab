@@ -1,9 +1,0 @@
-[project]
-name = "strands-agentcore"
-version = "0.1.0"
-description = "Bedrock AgentCore deployment for Strands agent"
-requires-python = ">=3.11"
-dependencies = [
-    "strands-agents",
-    "bedrock-agentcore",
-]
