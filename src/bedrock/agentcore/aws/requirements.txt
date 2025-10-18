@@ -1,3 +1,2 @@
 bedrock-agentcore
-openai
 strands-agents
