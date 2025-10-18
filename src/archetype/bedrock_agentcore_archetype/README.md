@@ -9,14 +9,19 @@ Deploy a Strands agent to AWS using Bedrock AgentCore Runtime SDK.
 brew install uv
 ```
 
-### Create virtual environment and install dependencies
+### Create independent project
 ```bash
-uv sync
+uv init . --no-workspace
+```
+
+### Add dependencies
+```bash
+uv add strands-agents bedrock-agentcore
 ```
 
 ## Files
 
-- `strands_agent.py` - Production agent for AWS deployment
+- `main.py` - Production agent for AWS deployment
 - `requirements.txt` - Legacy requirements file
 - `pyproject.toml` - Modern dependency management
 
@@ -24,7 +29,7 @@ uv sync
 
 ### Configure agent
 ```bash
-agentcore configure --entrypoint strands_agent.py --region us-east-1
+agentcore configure --entrypoint main.py --region us-east-1
 ```
 
 ### Test deployment locally
@@ -49,7 +54,7 @@ agentcore invoke '{"prompt": "Hello"}'
 
 ## Agent Configuration
 
-### Production Agent (`strands_agent.py`)
+### Production Agent (`main.py`)
 - Uses default Strands configuration
 - Ready for AWS deployment
 - No local dependencies

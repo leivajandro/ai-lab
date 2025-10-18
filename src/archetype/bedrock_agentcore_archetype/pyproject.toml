@@ -1,0 +1,10 @@
+[project]
+name = "bedrock-agentcore-archetype"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "bedrock-agentcore>=1.0.3",
+    "strands-agents>=1.13.0",
+]
