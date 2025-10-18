@@ -73,3 +73,6 @@ logs/
 # Artifacts (generated results)
 artifacts/*/*
 !artifacts/*/.gitkeep
+
+# Bedrock AgentCore
+.bedrock_agentcore/
